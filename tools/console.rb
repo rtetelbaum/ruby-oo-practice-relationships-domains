@@ -4,20 +4,22 @@ def reload
   load 'config/environment.rb'
 end
 
-#Pry.start
+driver1 = Driver.new("Roman")
+driver2 = Driver.new("Wes")
+driver3 = Driver.new("Caryn")
+driver4 = Driver.new("Bob")
 
-roman_bakery = Bakery.new("Roman's Bakery")
-wes_bakery = Bakery.new("Wes's Bakery")
-caryn_bakery = Bakery.new("Caryn's Bakery")
+passenger1 = Passenger.new("Charlie")
+passenger2 = Passenger.new("Sara")
+passenger3 = Passenger.new("Sam")
+passenger4 = Passenger.new("Laura")
 
-choco_chips = ingredients.new("chocolate chips", 700)
-flour = ingredients.new("flour", 500)
-apples = ingredients.new("apples", 200)
-eggs = ingredients.new("eggs", 300)
-water = ingredients.new("water", 0)
-frosting = ingredients.new("frosting", 400)
+ride1 = Ride.new(driver1, passenger1, 30.0)
+ride2 = Ride.new(driver2, passenger2, 3.2)
+ride3 = Ride.new(driver3, passenger3, 100.2)
+ride4 = Ride.new(driver4, passenger4, 17.5)
+ride5 = Ride.new(driver4, passenger4, 17.3)
+ride6 = Ride.new(driver1, passenger2, 105.6)
+ride7 = Ride.new(driver4, passenger1, 17.5)
 
-
-cookie = Dessert.new(roman_bakery, flour, eggs, water, choco_chips)
-cake = Dessert.new(wes_bakery, flour, eggs, water, frosting)
-apple_pie = Dessert.new(caryn_bakery, flour, eggs, water, apples)
+Pry.start
