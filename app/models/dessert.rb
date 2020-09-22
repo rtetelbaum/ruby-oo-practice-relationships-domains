@@ -14,7 +14,7 @@ class Dessert
     end
 
     def ingredients
-        dessert_ingredients = DessertIngredient.find_all { |di| di.dessert == self }
+        dessert_ingredients = DessertIngredient.all.find_all { |di| di.dessert == self }
         dessert_ingredients.collect { |di| di.ingredient }
     end
 
